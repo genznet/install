@@ -453,7 +453,7 @@ USAGE_JOB2="*/2 * * * * /usr/bin/update-ssh-usage.sh >/dev/null 2>&1"
 }
 
 
-# --- Proses Instalasi HOKAGE LEGEND ---
+# --- Proses Instalasi GENZNET AUTOSCRIPT ---
 function HOKAGEINSTALL(){
     echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
     echo -e "${BIBlue}│ ${BGCOLOR}    PROCESS INSTALLED SSH WS / OPENVPN    ${NC}${BIBlue} │${NC}"
