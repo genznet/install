@@ -451,7 +451,19 @@ USAGE_JOB2="*/2 * * * * /usr/bin/update-ssh-usage.sh >/dev/null 2>&1"
         echo -e "${YELLOW}    -> Jadwal update kuota sshws sudah ada, tidak ada yang diubah.${NC}"
     fi
 }
+res14() {
+    echo -e "${GREEN}    Memulai instalasi MENU WILDCARD CF...${NC}"
 
+    # Download script wildcard dari GitHub ke /usr/bin/menu-wc
+    wget -O /usr/bin/menu-wc \
+"https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/menu-wc.sh"
+
+    # Kasih permission execute
+    chmod +x /usr/bin/menu-wc
+
+    # (opsional) buat symlink biar bisa dipanggil juga pakai nama lain
+    # ln -sf /usr/bin/menu-wc /usr/bin/wildcard-cf
+}
 
 # --- Proses Instalasi GENZNET AUTOSCRIPT ---
 function HOKAGEINSTALL(){
@@ -508,7 +520,12 @@ function HOKAGEINSTALL(){
  echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
     echo -e "${BIBlue}│ ${BGCOLOR} PANTAU PEMAKAIANA KUOTA           ${NC}${BIBlue} │${NC}"
     echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
-    res12
+    res13
+    
+        echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
+    echo -e "${BIBlue}│ ${BGCOLOR}    INSTALL MENU WILDCARD CF       ${NC}${BIBlue} │${NC}"
+    echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
+    res14
 }
 HOKAGEINSTALL # Memanggil fungsi SKT4100
 
