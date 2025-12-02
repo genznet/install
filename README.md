@@ -6,12 +6,12 @@ Tampilan utama dari aplikasi ini dirancang agar mudah digunakan dan responsif, m
 ### INSTALL SCRIPT 
 
 ```
-apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/hokagelegend9999/install/refs/heads/main/alphav2 && chmod +x alphav2 && ./alphav2
+apt install -y && apt update -y && apt upgrade -y && wget -q https://raw.githubusercontent.com/genznet/install/refs/heads/main/alphav2 && chmod +x alphav2 && ./alphav2
 ```
 
 ## UPDATE SCRIPT
 ```
-wget -q https://github.com/hokagelegend9999/install/raw/refs/heads/main/update_alphav2 && chmod +x update_alphav2 && ./update_alphav2
+wget -q https://github.com/genznet/install/raw/refs/heads/main/update_alphav2 && chmod +x update_alphav2 && ./update_alphav2
 ```
 
 ### SUPPORT OS LINUX
@@ -23,7 +23,7 @@ wget -q https://github.com/hokagelegend9999/install/raw/refs/heads/main/update_a
 
 ``````
 
-  wget -qO- -O aksesroot.sh https://raw.githubusercontent.com/hokagelegend9999/alpha.v2/refs/heads/main/aksesroot.sh && bash aksesroot.sh
+  wget -qO- -O aksesroot.sh https://raw.githubusercontent.com/genznet/alpha.v2/refs/heads/main/aksesroot.sh && bash aksesroot.sh
 
 ```````
 
@@ -31,7 +31,7 @@ wget -q https://github.com/hokagelegend9999/install/raw/refs/heads/main/update_a
 #### INSTALL ULANG VPS UBUNTU DEBIAN
 
 ```
-curl -O https://raw.githubusercontent.com/hokagelegend9999/alpha.v2/refs/heads/main/reinstall.sh
+curl -O https://raw.githubusercontent.com/genznet/alpha.v2/refs/heads/main/reinstall.sh
 chmod +x reinstall.sh
 bash reinstall.sh debian 11 --password PASSWORD_KAMU
 
@@ -40,7 +40,7 @@ INSTALL HAPROXY DEBIAN 11
 
 ```
 sudo apt install -t bullseye-backports haproxy
-sed -i "s#xxx#https://raw.githubusercontent.com/hokagelegend9999/alpha.v2/refs/heads/main/#g" /etc/haproxy/haproxy.cfg
+sed -i "s#xxx#https://raw.githubusercontent.com/genznet/alpha.v2/refs/heads/main/#g" /etc/haproxy/haproxy.cfg
 sudo systemctl restart haproxy
 sudo systemctl status haproxy
 ```
@@ -52,7 +52,7 @@ sudo systemctl status haproxy
 - PENAMBAHAN PENGAHPUSAN CHACCE YANG MENUMPUK
 
 ```
-wget https://raw.githubusercontent.com/hokagelegend9999/alpha.v2/refs/heads/main/vpn_update_alphav2 && chmod +x vpn_update_alphav2 && ./vpn_update_alphav2
+wget https://raw.githubusercontent.com/genznet/alpha.v2/refs/heads/main/vpn_update_alphav2 && chmod +x vpn_update_alphav2 && ./vpn_update_alphav2
 ```
 
 
@@ -96,5 +96,5 @@ wget https://github.com/genznet/genom-genznet/raw/refs/heads/main/menu/update.sh
 # INSTALL SCRIPT FORCE
 
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://github.com/hokagelegend9999/install/raw/refs/heads/main/force && chmod +x force && sed -i -e 's/\r$//' force && screen -S setup ./force
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://github.com/genznet/install/raw/refs/heads/main/force && chmod +x force && sed -i -e 's/\r$//' force && screen -S setup ./force
 ```
