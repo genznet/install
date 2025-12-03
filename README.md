@@ -36,6 +36,12 @@ chmod +x reinstall.sh
 bash reinstall.sh debian 11 --password PASSWORD_KAMU
 
 ```
+
+```
+wget -O reinstall.sh https://raw.githubusercontent.com/bin456789/reinstall/main/reinstall.sh &&
+        chmod +x reinstall.sh &&
+        bash reinstall.sh Ubuntu 24.04
+```
 INSTALL HAPROXY DEBIAN 11
 
 ```
