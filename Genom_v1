@@ -466,7 +466,7 @@ res14() {
 }
 
 # --- Proses Instalasi GENZNET AUTOSCRIPT ---
-function HOKAGEINSTALL(){
+function GENZNETINSTALL(){
     echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
     echo -e "${BIBlue}│ ${BGCOLOR}    PROCESS INSTALLED SSH WS / OPENVPN    ${NC}${BIBlue} │${NC}"
     echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
@@ -527,7 +527,7 @@ function HOKAGEINSTALL(){
     echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
     res14
 }
-HOKAGEINSTALL # Memanggil fungsi SKT4100
+GENZNETINSTALL # Memanggil fungsi SKT4100
 
 # --- Konfigurasi Post-Instalasi ---
 # Pastikan file /home/re_otm ada dan berikan nilai default jika tidak
