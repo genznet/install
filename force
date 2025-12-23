@@ -30,10 +30,10 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To HOKAGE LEGEND vpn Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To GENZNET VPN Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Auther : ${green}HOKAGE LEGEND VPN ${NC}${YELLOW}(${NC} ${green} HOKAGE vpn Tunneling ${NC}${YELLOW})${NC}"
-echo -e " ©HOKAGE LEGEND PREMIUM STORE${YELLOW}(${NC} 2025 ${YELLOW})${NC}"
+echo -e "  Auther : ${green} GENZNET VPN ${NC}${YELLOW}(${NC} ${green}  GENZNET VPN Tunneling ${NC}${YELLOW})${NC}"
+echo -e " © GENZNET   PREMIUM STORE${YELLOW}(${NC} 2025 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -93,9 +93,9 @@ clear
 #########################
 # USERNAME
 rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/hokagelegend9999/ijin/refs/heads/main/force | grep $MYIP | awk '{print $2}')
+username=$(curl https://raw.githubusercontent.com/genznet/ijin/refs/heads/main/force | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/hokagelegend9999/ijin/refs/heads/main/force | grep $MYIP | awk '{print $3}')
+expx=$(curl https://raw.githubusercontent.com/genznet/ijin/refs/heads/main/force | grep $MYIP | awk '{print $3}')
 echo "$expx" >/usr/bin/e
 # DETAIL ORDER
 username=$(cat /usr/bin/user)
@@ -119,7 +119,7 @@ mai="datediff "$Exp" "$DATE""
 Info="(${green}Active${NC})"
 Error="(${RED}ExpiRED${NC})"
 today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/hokagelegend9999/ijin/refs/heads/main/force | grep $MYIP | awk '{print $4}')
+Exp1=$(curl https://raw.githubusercontent.com/genznet/ijin/refs/heads/main/force | grep $MYIP | awk '{print $4}')
 if [[ $today < $Exp1 ]]; then
 sts="${Info}"
 else
@@ -128,7 +128,7 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/hokagelegend9999/force/refs/heads/main/"
+    REPO="https://raw.githubusercontent.com/genznet/force/refs/heads/main/"
 
 ####
 start=$(date +%s)
@@ -175,8 +175,8 @@ CHAT_ID="1469244768"
 # --- Fungsi untuk Mengirim Pesan ke Telegram ---
 send_telegram_message() {
     MESSAGE=$1
-    BUTTON1_URL="https://t.me/hokagelegend1"
-    BUTTON2_URL="https://wa.me/087726917005"
+    BUTTON1_URL="https://t.me/genznet_vpn"
+    BUTTON2_URL="https://wa.me/089664810603"
     BUTTON_TEXT1="Telegram 😎"
     BUTTON_TEXT2="Whatsapp 🐳"
 
@@ -538,7 +538,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit Quota"
-wget https://raw.githubusercontent.com/hokagelegend9999/force/refs/heads/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/genznet/force/refs/heads/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
 
 cd
 wget -q -O /usr/bin/limit-ip "${REPO}limit/limit-ip"
@@ -1006,7 +1006,7 @@ EXPIRED=$(cat /usr/bin/e)
 
 MESSAGE="\`\`\`
 ❏━━━━━━━━━━━━━━━━━━━━━━━━━━❏
- 🤖 Hokage Store Project 🤖
+ 🤖  GENZNET Store Project 🤖
 ❏━━━━━━━━━━━━━━━━━━━━━━━━━━❏
 ❖ Status      : Active
 ❖ SCRIPT      : FORCE
@@ -1023,7 +1023,7 @@ MESSAGE="\`\`\`
 ❖ Domain      : $DOMAIN
 ❖ Expired     : $EXPIRED
 ❏━━━━━━━━***************━━━━━━━━━❏
-👑 Dev https://t.me/hokagelegend1 👑
+👑 Dev https://t.me/genznet_vpn 👑
 ❏━━━━━━━******************━━━━━━━━❏
 \`\`\`"
 
