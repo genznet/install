@@ -300,7 +300,7 @@ apt-get purge apparmor apparmor-utils -y >/dev/null 2>&1
 clear
 
 # --- Instalasi Tools Awal ---
-wget https://raw.githubusercontent.com/genznet/genom-genznet/main/TOOLS/tools.sh -O tools.sh &> /dev/null
+wget https://raw.githubusercontent.com/genznet/genomz/main/TOOLS/tools.sh -O tools.sh &> /dev/null
 chmod +x tools.sh
 bash tools.sh
 start=$(date +%s)
@@ -316,13 +316,13 @@ wget https://raw.githubusercontent.com/XTLS/Xray-core/main/app/stats/command/com
 
 cd
 clear
-wget https://raw.githubusercontent.com/genznet/genom-genznet/main/TOOLS/limit.sh -O limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/genznet/genomz/main/TOOLS/limit.sh -O limit.sh && chmod +x limit.sh && ./limit.sh
 clear
 
 # --- Fungsi Instalasi Modul ---
 res3() {
     echo -e "${GREEN}    Memulai instalasi SSH WS / OpenVPN...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/ssh-vpn.sh -O ssh-vpn.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/SYSTEM/ssh-vpn.sh -O ssh-vpn.sh
     chmod +x ssh-vpn.sh
     ./ssh-vpn.sh
     sudo systemctl enable --now chrony.service
@@ -332,7 +332,7 @@ res3() {
 
 res4() {
     echo -e "${GREEN}    Memulai instalasi XRAY...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/ins-xray.sh -O ins-xray.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/SYSTEM/ins-xray.sh -O ins-xray.sh
     chmod +x ins-xray.sh
     ./ins-xray.sh
     clear
@@ -340,7 +340,7 @@ res4() {
 
 res5() {
     echo -e "${GREEN}    Memulai instalasi WEBSOCKET SSH...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/WEBSOCKET/insshws.sh -O insshws.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/WEBSOCKET/insshws.sh -O insshws.sh
     chmod +x insshws.sh
     ./insshws.sh
     clear
@@ -348,7 +348,7 @@ res5() {
 
 res6() {
     echo -e "${GREEN}    Memulai instalasi BACKUP MENU...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/set-br.sh -O set-br.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/SYSTEM/set-br.sh -O set-br.sh
     chmod +x set-br.sh
     ./set-br.sh
     clear
@@ -356,7 +356,7 @@ res6() {
 
 res7() {
     echo -e "${GREEN}    Memulai instalasi OHP...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/WEBSOCKET/ohp.sh -O ohp.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/WEBSOCKET/ohp.sh -O ohp.sh
     chmod +x ohp.sh
     ./ohp.sh
     clear
@@ -364,7 +364,7 @@ res7() {
 
 res8() {
     echo -e "${GREEN}    Memulai pengunduhan EXTRA MENU...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/menu/update.sh -O update.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/menu/update.sh -O update.sh
     chmod +x update.sh
     ./update.sh
     clear
@@ -372,7 +372,7 @@ res8() {
 
 res9() {
     echo -e "${GREEN}    Memulai pengunduhan SLOWDNS...${NC}"
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/slowdns.sh -O slowdns.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/SYSTEM/slowdns.sh -O slowdns.sh
     chmod +x slowdns.sh
     ./slowdns.sh
     clear
@@ -383,7 +383,7 @@ res10() {
     mkdir -p /usr/local/kyt/
     wget -q -O /usr/local/kyt/udp-mini "${REPO}Fls/udp-mini"
      chmod +x /usr/local/kyt/udp-mini
-    wget https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/udp-custom.sh -O udp-custom.sh
+    wget https://raw.githubusercontent.com/genznet/genomz/main/SYSTEM/udp-custom.sh -O udp-custom.sh
     chmod +x udp-custom.sh
     bash udp-custom.sh
     clear
@@ -456,7 +456,7 @@ res14() {
 
     # Download script wildcard dari GitHub ke /usr/bin/menu-wc
     wget -O /usr/bin/menu-wc \
-"https://raw.githubusercontent.com/genznet/genom-genznet/main/SYSTEM/menu-wc.sh"
+"https://raw.githubusercontent.com/genznet/genomz/main/SYSTEM/menu-wc.sh"
 
     # Kasih permission execute
     chmod +x /usr/bin/menu-wc
@@ -559,7 +559,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 fi
 history -c
 
-serverV=$( curl -sS https://raw.githubusercontent.com/genznet/genom-genznet/main/TOOLS/versi )
+serverV=$( curl -sS https://raw.githubusercontent.com/genznet/genomz/main/TOOLS/versi )
 echo "$serverV" > /opt/.ver
 
 aureb=$(cat /home/re_otm)

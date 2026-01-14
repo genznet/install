@@ -96,7 +96,7 @@ apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub
 ```
 cd root
 rm update.sh
-wget https://github.com/genznet/genom-genznet/raw/refs/heads/main/menu/update.sh && chmod +x update.sh && ./update.sh
+wget https://github.com/genznet/genomz/raw/refs/heads/main/menu/update.sh && chmod +x update.sh && ./update.sh
 ```
 
 # INSTALL SCRIPT FORCE
