@@ -467,40 +467,32 @@ res14() {
 res15() {
     echo -e "${GREEN}    Memulai instalasi ZIVPN...${NC}"
 
-    # Sumber script ZiVPN (RAW)
     ZIVPN_RAW1="https://raw.githubusercontent.com/genznet/install/main/zivpn"
     ZIVPN_RAW2="https://github.com/genznet/install/raw/main/zivpn"
-
-    # Lokasi pemasangan script
     install_path="/usr/local/sbin/zivpn-install"
 
     mkdir -p /etc/zivpn
 
-    # Download dengan fallback URL
+    # download installer
     if ! wget -q -O "$install_path" "$ZIVPN_RAW1"; then
         wget -q -O "$install_path" "$ZIVPN_RAW2" || {
-            echo -e "${red}❌ Gagal download script ZiVPN dari GitHub${NC}"
-            echo -e "${yell}Cek apakah file 'zivpn' di repo memang 1 file (bukan folder) dan public.${NC}"
+            echo -e "${RED}❌ Gagal download script ZiVPN dari GitHub${NC}"
             read -n 1 -s -r -p "Tekan tombol apa saja..."
             return 1
         }
     fi
-
     chmod +x "$install_path"
 
-    # Jalankan installer ZiVPN (kalau script Anda memang installer langsung)
-    # Jika script "zivpn" Anda adalah menu/manager, baris ini bisa Anda nonaktifkan.
+    # hapus wrapper konflik (kalau ada) supaya 'zivpn' tetap jadi menu ZiVPN
+    rm -f /usr/local/sbin/zivpn
+
+    # jalankan installer (installer Anda sudah membuat /usr/bin/zivpn -> /usr/local/bin/zivpn-menu)
     bash "$install_path"
 
-    # (Opsional) buat wrapper command "zivpn" biar gampang dipanggil dari menu
-    cat >/usr/local/sbin/zivpn <<'EOF'
-#!/bin/bash
-exec /usr/local/sbin/zivpn-install "$@"
-EOF
-    chmod +x /usr/local/sbin/zivpn
-
+    hash -r 2>/dev/null || true
     clear
 }
+
 
 # --- Proses Instalasi GENZNET AUTOSCRIPT ---
 function GENZNETINSTALL(){
